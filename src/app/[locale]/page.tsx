@@ -1,6 +1,6 @@
 "use client";
 
-import { NavbarComponent, Skills } from "@/components";
+import { Experience, NavbarComponent, Skills } from "@/components";
 import { Animation } from "@/components/ui/animation";
 import { BackgroundBeams } from "@/components/ui/background-beam";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
@@ -68,6 +68,7 @@ export default function Home() {
         <BackgroundBeams />
       </div>
       <Skills />
+      {/* <Experience /> */}
     </>
   );
 }
