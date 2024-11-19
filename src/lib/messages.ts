@@ -9,7 +9,12 @@ export const getMessages = async (locale: string) => {
   return messages;
 };
 
-export const addMessage = (params: any): void => {
+type AddMessageParams = {
+  error: string | { errors?: Record<string, string>[]; message?: string };
+  locale: string;
+};
+
+export const addMessage = (params: AddMessageParams): void => {
   message.open({
     type: "error",
     content: makeErrMsg(params),

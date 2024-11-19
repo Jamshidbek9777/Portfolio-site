@@ -3,11 +3,23 @@ export const pxToRem = (pxValue: number, baseFontSize: number = 16): string => {
   return `${remValue}rem`;
 };
 
-export const makeErrMsg = (params: any): string => {
-  const { error, locale } = params;
+type ErrorObject = {
+  errors?: Record<string, string>[]; // Adjust the shape if `errors` is more specific
+  message?: string;
+};
 
-  if ("errors" in error && error.errors instanceof Array) {
-    // @ts-ignore
+type MakeErrMsgParams = {
+  error: string | ErrorObject;
+  locale: string;
+};
+
+export const makeErrMsg = ({ error, locale }: MakeErrMsgParams): string => {
+  if (
+    typeof error === "object" &&
+    "errors" in error &&
+    Array.isArray(error.errors)
+  ) {
+    // @ts-expect
     return error.errors[0][locale];
   }
 
@@ -15,5 +27,5 @@ export const makeErrMsg = (params: any): string => {
     return error;
   }
 
-  return error.message;
+  return error.message || "Unknown error";
 };

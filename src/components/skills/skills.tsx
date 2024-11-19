@@ -1,19 +1,17 @@
-import { Button } from "@nextui-org/button";
-import { HoverEffect } from "../ui/card-hover";
 import { useEffect, useId, useRef, useState } from "react";
 import { useOutsideClick } from "../ui/outside";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-const skills = [
-  { id: 1, label: "Javascript", icon: "/img/js.png" },
-  { id: 2, label: "Typescript", icon: "/img/typescript.png" },
-  { id: 3, label: "React.js", icon: "/img/reactjs.png" },
-  { id: 4, label: "Next.js", icon: "/img/nextjs.svg" },
-  { id: 5, label: "Bootstrap", icon: "/img/bootstrap.png" },
-  { id: 6, label: "Tailwind", icon: "/img/tailwind.svg" },
-  { id: 7, label: "Sass", icon: "/img/sass.svg" },
-  { id: 8, label: "Git", icon: "/img/git.svg" },
-];
+// const skills = [
+//   { id: 1, label: "Javascript", icon: "/img/js.png" },
+//   { id: 2, label: "Typescript", icon: "/img/typescript.png" },
+//   { id: 3, label: "React.js", icon: "/img/reactjs.png" },
+//   { id: 4, label: "Next.js", icon: "/img/nextjs.svg" },
+//   { id: 5, label: "Bootstrap", icon: "/img/bootstrap.png" },
+//   { id: 6, label: "Tailwind", icon: "/img/tailwind.svg" },
+//   { id: 7, label: "Sass", icon: "/img/sass.svg" },
+//   { id: 8, label: "Git", icon: "/img/git.svg" },
+// ];
 const cards = [
   {
     title: "Javascript",
@@ -261,11 +259,12 @@ export const Skills = () => {
           </AnimatePresence>
           <AnimatePresence>
             {active && typeof active === "object" ? (
-              <div className="fixed inset-0  grid place-items-center z-[100]">
+              <div className="fixed inset-0  grid place-items-center z-[100] ">
                 <motion.div
+                  style={{ margin: "0 30px" }}
                   layoutId={`card-${active.title}-${id}`}
                   ref={ref}
-                  className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+                  className=" h-[550px] rounded-lg max-w-[500px]  md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl "
                 >
                   <motion.div
                     layoutId={`image-${active.title}-${id}`}
@@ -307,7 +306,7 @@ export const Skills = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-full md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 "
                       >
                         {typeof active.content === "function"
                           ? active.content()
@@ -323,7 +322,7 @@ export const Skills = () => {
             style={{ width: "100%" }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-full"
           >
-            {cards.map((card, index) => (
+            {cards.map((card) => (
               <motion.div
                 layoutId={`card-${card.title}-${id}`}
                 key={`card-${card.title}-${id}`}

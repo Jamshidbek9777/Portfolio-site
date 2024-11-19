@@ -14,7 +14,7 @@ export const NextIntl = async ({ locale, children }: Props) => {
   let messages;
   try {
     messages = await getMessages(locale);
-  } catch (error) {
+  } catch {
     notFound();
   }
 

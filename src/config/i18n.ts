@@ -5,8 +5,8 @@ import { getMessages } from "@/lib";
 export const locales = ["en", "ru", "uz"] as const;
 export const localePrefix = "always";
 
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as any)) notFound();
+export default getRequestConfig(async ({ locale }: { locale: string }) => {
+  if (!locales.includes(locale as (typeof locales)[number])) notFound();
 
   return {
     messages: await getMessages(locale),
