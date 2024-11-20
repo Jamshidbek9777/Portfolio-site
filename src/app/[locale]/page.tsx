@@ -1,6 +1,6 @@
 "use client";
 
-import { NavbarComponent, Skills } from "@/components";
+import { Experience, NavbarComponent, Skills } from "@/components";
 import { BackgroundBeams } from "@/components/ui/background-beam";
 import { Dot, Github, Instagram, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function Home() {
       <NavbarComponent />
       <div
         id="about"
-        className="mx-auto max-w-7xl h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+        className="mx-auto max-w-[1240px] h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
       >
         <div className="mx-auto p-4">
           <h1 className="mb-10 relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
@@ -50,7 +50,7 @@ export default function Home() {
         <BackgroundBeams />
       </div>
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
     </>
   );
 }

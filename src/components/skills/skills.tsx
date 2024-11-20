@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { useOutsideClick } from "../ui/outside";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 // const skills = [
 //   { id: 1, label: "Javascript", icon: "/img/js.png" },
 //   { id: 2, label: "Typescript", icon: "/img/typescript.png" },
@@ -21,16 +22,12 @@ const cards = [
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          JavaScript, often abbreviated as JS, is a programming language and
+          core technology of the Web, alongside HTML and CSS. 99% of websites
+          use JavaScript on the client side for webpage behavior. Web browsers
+          have a dedicated JavaScript engine that executes the client code.
+          These engines are also utilized in some servers and a variety of apps.
+          The most popular runtime system for non-browser usage is Node.js.
         </p>
       );
     },
@@ -44,15 +41,10 @@ const cards = [
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          TypeScript is a free and open-source high-level programming language
+          developed by Microsoft that adds static typing with optional type
+          annotations to JavaScript. It is designed for the development of large
+          applications and transpiles to JavaScript.
         </p>
       );
     },
@@ -67,15 +59,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          React (also known as React.js or ReactJS) is a free and open-source
+          front-end JavaScript library that aims to make building user
+          interfaces based on components more "seamless". It is maintained by
+          Meta (formerly Facebook) and a community of individual developers and
+          companies.
         </p>
       );
     },
@@ -89,14 +77,9 @@ const cards = [
     content: () => {
       return (
         <p>
-          Led Zeppelin, a legendary British rock band, is renowned for their
-          innovative sound and profound impact on the music industry. Formed in
-          London in 1968, they have become a cultural icon in the rock music
-          world. <br /> <br /> Their songs often reflect a blend of blues, hard
-          rock, and folk music, capturing the essence of the 1970s rock era.
-          With a career spanning over a decade, Led Zeppelin has released
-          numerous hit albums and singles that have garnered them a massive fan
-          following both in the United Kingdom and abroad.
+          Next.js is an open-source web development framework created by the
+          private company Vercel providing React-based web applications with
+          server-side rendering and static rendering.
         </p>
       );
     },
@@ -110,15 +93,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
+          Bootstrap (formerly Twitter Bootstrap) is a free and open-source CSS
+          framework directed at responsive, mobile-first front-end web
+          development. It contains HTML, CSS and (optionally) JavaScript-based
+          design templates for typography, forms, buttons, navigation, and other
+          interface components.
         </p>
       );
     },
@@ -132,15 +111,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
+          Tailwind CSS is an open-source CSS framework. Unlike other frameworks,
+          like Bootstrap, it does not provide a series of predefined classes for
+          elements such as buttons or tables. Instead, it creates a list of
+          "utility" CSS classes that can be used to style each element by mixing
+          and matching.
         </p>
       );
     },
@@ -154,15 +129,9 @@ const cards = [
     content: () => {
       return (
         <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
+          Sass (short for syntactically awesome style sheets) is a preprocessor
+          scripting language that is interpreted or compiled into Cascading
+          Style Sheets (CSS). SassScript is the scripting language itself.
         </p>
       );
     },
@@ -176,15 +145,9 @@ const cards = [
     content: () => {
       return (
         <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
+          Git is a distributed version control system that tracks versions of
+          files. It is often used to control source code by programmers who are
+          developing software collaboratively.
         </p>
       );
     },
@@ -219,33 +182,16 @@ export const Skills = () => {
 
   return (
     <>
-      <div></div>
-
       <div
         id="skills"
-        className="mt-5 mx-auto max-w-7xl bg-neutral-950 p-10 rounded-md select-none"
+        className="mt-5 mx-auto max-w-[1240px] bg-neutral-950 p-10 rounded-md select-none"
       >
-        {/* <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
           <Button className="mb-3">Here is my skills</Button>
           <p className="mb-6 text-center">
             The skills, tools, and technologies I am really good at:
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-full">
-            {skills.map((skill) => (
-              <Button
-                key={skill.id}
-                className="flex flex-col items-center bg-neutral-800 p-4 rounded-lg shadow-md h-full"
-              >
-                <img
-                  src={skill.icon}
-                  alt={skill.label}
-                  className="w-12 h-12 mb-3 select-none"
-                />
-                <p className="text-white text-sm font-medium">{skill.label}</p>
-              </Button>
-            ))}
-          </div>
-        </div> */}
+        </div>
         <div>
           <AnimatePresence>
             {active && typeof active === "object" && (
@@ -290,17 +236,8 @@ export const Skills = () => {
                           {active.title}
                         </motion.h3>
                       </div>
-
-                      <motion.a
-                        layoutId={`button-${active.title}-${id}`}
-                        href={active.ctaLink}
-                        target="_blank"
-                        className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                      >
-                        {active.ctaText}
-                      </motion.a>
                     </div>
-                    <div className="pt-4 relative px-4">
+                    <div className="pt-1 relative px-4">
                       <motion.div
                         layout
                         initial={{ opacity: 0 }}
@@ -339,24 +276,18 @@ export const Skills = () => {
                       height={100}
                       src={card.src}
                       alt={card.title}
-                      className="h-14 w-14 md:h-14 md:w-14 rounded-lg object-cover object-top flex justify-center items-center"
+                      className="h-14 w-fit md:h-14 md:w-fit rounded-lg object-cover object-top flex justify-center items-center"
                     />
                   </motion.div>
                   <div className="">
                     <motion.h3
                       layoutId={`title-${card.title}-${id}`}
-                      className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                      className="font-medium text-neutral-800 dark:text-neutral-200 text-center"
                     >
                       {card.title}
                     </motion.h3>
                   </div>
                 </div>
-                {/* <motion.button
-                  layoutId={`button-${card.title}-${id}`}
-                  className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
-                >
-                  {card.ctaText}
-                </motion.button> */}
               </motion.div>
             ))}
           </ul>

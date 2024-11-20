@@ -14,6 +14,7 @@
     "@nextui-org/react": "^2.4.8",
     "@tabler/icons-react": "^3.22.0",
     "antd": "^5.22.1",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
@@ -27,6 +28,7 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

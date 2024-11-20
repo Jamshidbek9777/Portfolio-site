@@ -23,6 +23,19 @@ export const GlobalStyles = createGlobalStyle`
     vertical-align: baseline;
     background: transparent;
     scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+  width: 4px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
   }
 
   body {
