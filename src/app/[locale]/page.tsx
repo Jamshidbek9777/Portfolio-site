@@ -1,6 +1,6 @@
 "use client";
 
-import { Experience, NavbarComponent, Skills } from "@/components";
+import { Experience, NavbarComponent, Projects, Skills } from "@/components";
 import { BackgroundBeams } from "@/components/ui/background-beam";
 import { Dot, Github, Instagram, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -51,6 +51,7 @@ export default function Home() {
       </div>
       <Skills />
       <Experience />
+      <Projects />
     </>
   );
 }

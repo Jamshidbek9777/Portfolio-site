@@ -14,19 +14,14 @@ export const Experience = () => {
       className="mt-5 mx-auto max-w-[1240px] bg-neutral-950 p-6 md:p-10 rounded-md"
     >
       <div className="flex flex-col justify-center items-center text-center">
-        <Button className="mb-4 text-lg bg-indigo-600 hover:bg-indigo-700">
-          Experience
-        </Button>
+        <Button className="mb-4 text-lg">Experience</Button>
         <p className="mb-6 text-gray-300 text-base md:text-lg">
           Here is a quick summary of my most recent experiences:
         </p>
       </div>
 
-      <div
-        data-aos="fade-up"
-        className="p-6 bg-neutral-800 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mt-5 shadow-lg hover:shadow-xl transition-shadow duration-300"
-      >
-        <div className="flex-1 text-2xl text-indigo-400 font-semibold mb-4 md:mb-0">
+      <div className="p-6 bg-neutral-800 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mt-5 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="flex-1 text-2xl  text-[#006be6] font-semibold mb-4 md:mb-0">
           Eduagency
         </div>
 
@@ -51,7 +46,7 @@ export const Experience = () => {
         data-aos="fade-up"
         className="p-6 bg-neutral-800 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mt-5 shadow-lg hover:shadow-xl transition-shadow duration-300"
       >
-        <div className="flex-1 text-2xl text-indigo-400 font-semibold mb-4 md:mb-0">
+        <div className="flex-1 text-2xl text-[#006be6] font-semibold mb-4 md:mb-0">
           Coreteam
         </div>
 
