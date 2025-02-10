@@ -61,8 +61,8 @@ const cards = [
         <p>
           React (also known as React.js or ReactJS) is a free and open-source
           front-end JavaScript library that aims to make building user
-          interfaces based on components more seamless. It is maintained by
-          Meta (formerly Facebook) and a community of individual developers and
+          interfaces based on components more seamless. It is maintained by Meta
+          (formerly Facebook) and a community of individual developers and
           companies.
         </p>
       );
@@ -210,7 +210,7 @@ export const Skills = () => {
                   style={{ margin: "0 30px" }}
                   layoutId={`card-${active.title}-${id}`}
                   ref={ref}
-                  className=" h-[550px] rounded-lg max-w-[500px]  md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl "
+                  className=" rounded-lg max-w-[500px]  md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl "
                 >
                   <motion.div
                     layoutId={`image-${active.title}-${id}`}
