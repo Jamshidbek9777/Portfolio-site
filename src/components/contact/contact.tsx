@@ -23,8 +23,8 @@ export const Contact = () => {
       <div className="flex flex-col justify-center items-center">
         <Button className="mb-4 text-lg">Get In Touch</Button>
         <p className="mb-6 text-base  max-w-2xl">
-          Feel free to reach out to me if you're looking for a developer, have a
-          query, or simply want to connect.
+          Feel free to reach out to me if you are looking for a developer, have
+          a query, or simply want to connect.
         </p>
 
         {/* Contact Details */}

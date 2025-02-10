@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Contact,
-  Experience,
-  NavbarComponent,
-  Projects,
-  Skills,
-} from "@/components";
+import { Contact, NavbarComponent, Projects, Skills } from "@/components";
 import { BackgroundBeams } from "@/components/ui/background-beam";
 import { Dot, Github, Instagram, MapPin } from "lucide-react";
 import Link from "next/link";
