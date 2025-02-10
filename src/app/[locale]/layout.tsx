@@ -14,7 +14,7 @@ type LayoutProps = {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Learning Management System",
+  title: "Portfolio",
   description: "Developed by Jamshidbek",
 };
 export default function RootLayout({
